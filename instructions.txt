@@ -1,0 +1,8 @@
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt-get install python3.8 python3.8-venv python3.8-dev
+export PYTHONNOUSERSITE=1
+python3 -m venv env
+. env/bin/activate
+pip install --default-timeout=1000 -r requirements.txt
+pip install jupyterlab-pygments==0.1.2 ipywidgets==7.6.5 jupyterlab-widgets==1.0.2 jupyterlab==3.2.4
+jupyter notebook
